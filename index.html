@@ -5,8 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>mTools使用示例</title>
+  <script src="mTools.js"></script>
+  <script>
+    mTools.initREM();
+
+    onerror = function(err){ mTools.log(err) }
+
+  </script>
+  <style>
+    html, body { max-width: 750px; position: relative; min-height: 100%; margin: 0 auto; font-size: 0.4266666666666667rem;}
+    * {box-sizing: border-box;}
+    .img-x {max-width: 100%; margin-bottom: 10px;}
+    .art-tit { font-size: .48rem; line-height: 2; padding: 20px; border-bottom: 3px solid #888;}
+    .art-con { line-height: 1.4; text-indent: 2em; padding: 10px;}
+    .art-ftr { line-height: 1.3; font-size: .26rem; color:#888; padding:10px; }
+    .network-tip {font-size: 16px; padding: 10px 10px; display: none; background-color: #f44336; color:#fff; position: fixed; top:0; right: 0;left: 0;bottom: auto;}
+
+    
+  </style>
 </head>
 <body>
+  <div id="networkTip" class="network-tip"> 网络已断开，检查网络连接 </div>
+  <main>
+    <article class="">
+      <header class="art-tit">
+      三年一觉山林梦，碧草云天漫武功
+      </header>
+      <p class="art-con">
+        第一次去武功山还是三年前，只因为听别人说那里好看，未经多少了解的情况下便带着寝室一般兄弟杀向武功山，相比现在，那实在是一场说走就走了的旅行。越是不曾了解越容易被吸引，如果功课做太多，反而在观景时容易跳出别人曾见过的画面而影响自身的观赏兴致，那一次便是有惊鸿一瞥的惊艳。即使已是秋天，草色已不似眼下的翠绿逼人，整个山顶目光所及之处都是一片苍黄萧瑟之像，且天空不时飘雨，迷雾笼罩，风光不现，但仍是被它某种莫名的魅力所吸引。夜宿金顶，室友们都在玩牌，一人到山顶独逛，深感此山可多来几次，于是有了第二次、第三次以及可以预见的更多次。在山上遇见迷途晚归的驴友，回到客栈简短闲聊，却结为至今时常联系的挚友。
+      </p>
+      <p>
+        <img id="aimg_wO0S2" class="zoom img-x" src="http://img.lotour.net/Photo/201410/20141027/201410271151186463750_910.jpg" border="0" style="height: auto; display: block;">
+        <img id="aimg_CB96c" class="zoom img-x" src="http://img.lotour.net/Photo/201410/20141027/201410271151203495000_910.jpg" border="0" style="height: auto; display: block;">
+        <img id="aimg_CTW6T" class="zoom img-x" src="http://img.lotour.net/Photo/201410/20141027/201410271151220370000_910.jpg" border="0" style="height: auto; display: block;">
+        <img id="aimg_f3sCj" class="zoom img-x" src="http://img.lotour.net/Photo/201410/20141027/201410271151284120000_910.jpg" border="0" style="height: auto; display: block;">
+      </p>
+      <footer class="art-ftr">
+©版权声明：本文系作者授权乐途旅游网发表，转载需注明稿件来源：“乐途旅游网与原创作者风的君王”；如果单独转载图片，请注明“图片来源风的君王”，违者将依法追究责任。本文的知识产权归原创作者风的君王所有，若出现侵权纠纷，由本文原创作者风的君王负责，与乐途旅游网无关。
+      </footer>
+    </article>
+  </main>
+  <script type="text/javascript">
+  new mTools.Network(function(){
+    document.getElementById('networkTip').style.display='none';
+  }, function(){
+    document.getElementById('networkTip').style.display='block';
+  })
 
+  mTools.pageVisiblity(function(){
+    console.log('页面可见', Date())
+  }, function(){
+    console.log('页面不可见', Date())
+  })
+  1+x;
+  </script>
 </body>
 </html>
